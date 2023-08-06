@@ -1,59 +1,47 @@
 <style>
-  .bucket {
-    background: linear-gradient(45deg, #81FFEF, #F067B4);
-    width: 300px;
-    height: 200px;
+  .diary-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: space-between;
   }
-  button {
-  border-radius: 4px;
-  background-color: transparent;
-  border: none;
-  color: #524a79;
-  text-align: center;
-  font-size: 32px;
-  padding: 16px;
-  width: 300px;
-  transition: all 0.5s;
-  cursor: pointer;
-  font-weight: bolder;
-}
 
-button{
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-button:after {
-  content: '»';
-  position: absolute;
-  opacity: 0;  
-  top: 14px;
-  right: 1px;
-  transition: 0.5s;
-}
-
-button:hover{
-  padding-right: 24px;
-  padding-left:8px;
-}
-
-button:hover:after {
-  opacity: 1;
-  right: 10px;
-}
+  .checkbox-container{
+      display: flex;
+      flex-direction: column;
+  }
 </style>
-<div class = "bucket">
-  <button id = "bucketlist"><span>BUCKET LIST</span></button>
+
+<div class="diary-container">
+  <h1>Diary Pluggin</h1>
+  <div class="checkbox-container">
+      <label class="container">Bucket List
+          <input type="checkbox" value="BucketList">
+          <span class="checkmark"></span>
+      </label>
+
+      <label class="container" id="calendar">Calendar
+          <input type="checkbox" value="Calendar">
+          <span class="checkmark"></span>
+      </label>
+
+      <label class="container">Journal Entry
+          <input type="checkbox" value="Journal Entry">
+          <span class="checkmark"></span>
+      </label>
+  </div>
+  <button id="submit">CREATE</button>
+  <button id="close">EXIT</button>
 </div>
 
-<!-- <div class = "categories">
-  <div> Movies </div>
-  <div> Books </div>
-</div> -->
 <script>
-  document.getElementById('bucketlist').onclick = (event) =>{
-    parent.postMessage({pluginMessage: {type: 'categories'}}, '*')
+  const arr = []
+  document.getElementById('submit').onclick = () =>{
+      var markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+      for (var checkbox of markedCheckbox) {
+        arr.push(checkbox.value);
+      // document.body.append(checkbox.value + ' '); 
+      }
+    parent.postMessage({ pluginMessage:{type:'submit',arr}},'*')
   }
 </script>
