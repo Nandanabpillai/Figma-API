@@ -15,6 +15,6 @@ Long Description about project. This project do that. This project is awesome...
 ## Libraries used
 Library Name - Version
 ## How to configure
-Instructions for setting up project
+First and foremost, you need a figma account.Get one free! Install typescript, and other npm requirements. Get ready to setup and get your diary elements....
 ## How to Run
 Instructions for running
