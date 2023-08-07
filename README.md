@@ -18,7 +18,7 @@ The user can also make necessary changes to the components, like designs and loc
 ## How it Works ?
 The project opens up with displaying a form wherein the user can select the required components. On clicking the create button, the selected functionalities are displayed in the screen. The user can now edit or relocate the components according to his/her needs.
 ## Libraries used
-Library Name - Version
+Figma Api
 ## How to configure
 First and foremost, you need a figma account. Get one for free!
 
