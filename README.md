@@ -10,9 +10,9 @@ The user can use all the components and make the designs accordingly. Hence, thi
 
 The user can also make necessary changes to the components, like designs and location, thereby adding a personal touch to the components...
 ## Team members
-1. [Aleena Jacob](https://github.com/TH-Activities/saturday-hack-night-template)
-2. [Jesmi George](https://github.com/TH-Activities/saturday-hack-night-template)
-3. [Nandana B Pillai](https://github.com/TH-Activities/saturday-hack-night-template)
+1. [Aleena Jacob](https://github.com/aleenajacob03)
+2. [Jesmi George](https://github.com/jesmigeorge)
+3. [Nandana B Pillai](https://github.com/Nandanabpillai)
 ## Link to product walkthrough
 [link to video](Link Here)
 ## How it Works ?
@@ -26,4 +26,4 @@ Install typescript, and other npm requirements.
 
 Get ready to setup and get your diary elements....
 ## How to Run
-Instructions for running
+In the manifest.json file make sure that the 'ui' and 'main' fields have the correct name of the html and js files respectively.Then open the Figma file, run the plugin and the components you selected would be provided to you.
